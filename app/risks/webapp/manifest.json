@@ -10,11 +10,24 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
+    
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.10.6",
       "toolsId": "751c8e84-2b05-4894-aa90-d858c5e5c8f1"
     },
+    "crossNavigation": {
+      "inbounds": {
+        "Risks-display": {
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "Risks",
+          "action": "display"
+        }
+      }
+      },
     "dataSources": {
       "mainService": {
         "uri": "/odata/v4/service/risk/",
@@ -133,5 +146,9 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "cpapp.service"
   }
 }
